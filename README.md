@@ -1,2 +1,3 @@
-# test_meson
-CythonとMesonの組み合わせをテストするためのプロジェクト
+# Test Meson project
+
+CythonとMesonの組み合わせをするためのテストプロジェクト

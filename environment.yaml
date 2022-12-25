@@ -1,0 +1,28 @@
+# To use:
+#   $ conda env create -f environment.yaml  # `mamba` works too for this command
+#   $ conda activate test-meson
+#
+name: test-meson
+channels:
+- conda-forge
+- default
+dependencies:
+- python >= 3.9
+- meson>=0.64.0
+- meson-python >= 0.10.0
+- ninja >= 1.8.2
+# - cython == 3.0.0a11 installed by pip temporarily
+- numpy
+  # for developper tools
+- ipython
+- black
+- isort
+- flake8
+- mypy
+- rich-click
+- pre-commit
+# pip-install dependencies
+- pip
+- pip:
+  - cython == 3.0.0a11
+  - cython-lint

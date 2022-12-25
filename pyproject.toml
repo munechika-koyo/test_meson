@@ -1,0 +1,72 @@
+[build-system]
+build-backend = "mesonpy"
+requires = ["cython == 3.0.0a11", "numpy", "meson-python", "ninja >= 1.8.2"]
+
+[project]
+name = "test-meson"
+description = "Test for Meson with Cython"
+version = "0.1"
+license = { file = "LICENSE" }
+readme = "README.md"
+authors = [
+  { name = "Koyo Munechika", email = "munechika.koyo@torus.nr.titech.ac.jp" },
+]
+maintainers = [
+  { name = "Koyo Munechika", email = "munechika.koyo@torus.nr.titech.ac.jp" },
+]
+requires-python = ">=3.9"
+dependencies = ["numpy"]
+
+[project.optional-dependencies]
+docs = [
+  "docutils >= 0.19, < 0.20",
+  "ipykernel",
+  "ipywidgets",
+  "nbsphinx",
+  "pillow",
+  "pygments >= 2.11.0",
+  "sphinx >= 5, < 6",
+  "sphinx-prompt",
+  "sphinx-copybutton",
+  "pydata-sphinx-theme < 0.11",
+  "sphinx-design",
+  "pandoc",
+  "sphinx-codeautolink",
+]
+dev = [
+  "ipython",
+  "flake8",
+  "black",
+  "isort",
+  "mypy",
+  "rich-click",
+  "cython-lint",
+  "pre-commit",
+  "cython==3.0.0a11",
+  "setuptools",       # added untill meson-python comes to allow the editable install
+]
+
+[project.urls]
+repository = "https://github.com/munechika-koyo/test_meson"
+
+
+[tool.black]
+line-length = 100
+
+[tool.cython-lint]
+max-line-length = 100
+
+[tool.flake8]
+max-line-length = 100
+select = "C,E,F,W,B,B950"
+ignore = "E203,E501,W503"
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.mypy]
+follow-imports = "silent"
+ignore-missing-imports = true
+show-column-numbers = true
+no-pretty = true
