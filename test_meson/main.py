@@ -2,8 +2,8 @@
 """
 import sys
 from pathlib import Path
-from lib1 import test_mod1 as tm
-from lib2.test_mod2 import TestClass2
+from .lib1 import test_mod1 as tm
+from .lib2.test_mod2 import TestClass2
 
 sys.path.append(Path(__file__).parent)
 
