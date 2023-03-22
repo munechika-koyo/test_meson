@@ -1,9 +1,9 @@
-"""Main module for test library to try meson build
+"""Main module for test built module by meson
 """
 import sys
 from pathlib import Path
-from .lib1 import test_mod1 as tm
-from .lib2.test_mod2 import TestClass2
+from .lib1 import module as mod
+from .lib2.module import TestClass2
 
 sys.path.append(Path(__file__).parent)
 
@@ -11,7 +11,7 @@ __all__ = ["main"]
 
 
 def main() -> None:
-    tm.hello_cython()
+    mod.hello_cython()
 
     test = TestClass2(1, 2, 3)
     test.print_result()

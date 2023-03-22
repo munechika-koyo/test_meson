@@ -8,7 +8,7 @@ from numpy cimport import_array, ndarray, uint32_t
 
 from cython.parallel import prange
 
-__all__ = ["example_mpi"]
+__all__ = ["example_parallel"]
 
 
 import_array()
@@ -20,7 +20,9 @@ cpdef void hello_cython():
 @cython.boundscheck(False)
 @cython.wraparound(False)
 @cython.initializedcheck(False)
-cpdef ndarray[uint32_t, ndim=2] example_mpi(int nx=100, int ny=100):
+cpdef ndarray[uint32_t, ndim=2] example_parallel(int nx=100, int ny=100):
+    """Insert 1 to all elements of (nx, ny) matrix for parallel computing example.
+    """
     cdef:
         ndarray[uint32_t, ndim=2] ans = np.zeros((nx, ny), dtype=np.uint32)
         uint32_t[:, ::1] ans_mv = ans
@@ -48,6 +50,8 @@ cdef class TestClass1:
         self.b = b
 
     cpdef void print_result(self):
+        """print self.a + self.b
+        """
         cdef int c = self.add()
         printf("a: %d, b: %d, a+b: %d\n", self.a, self.b, c)
 

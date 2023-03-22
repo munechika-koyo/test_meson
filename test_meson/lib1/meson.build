@@ -1,5 +1,5 @@
 pyx_files = [
-  ['test_mod1', 'test_mod1.pyx'],
+  ['module', 'module.pyx'],
 ]
 
 foreach pyx_file : pyx_files
@@ -17,7 +17,7 @@ endforeach
 python_sources = [
     '__init__.py',
     '__init__.pxd',
-    'test_mod1.pxd',
+    'module.pxd',
 ]
 
 py.install_sources(

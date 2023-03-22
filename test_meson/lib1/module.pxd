@@ -3,7 +3,7 @@ from numpy cimport ndarray, uint32_t
 
 cpdef void hello_cython()
 
-cpdef ndarray[uint32_t, ndim=2] example_mpi(int nx=*, int ny=*)
+cpdef ndarray[uint32_t, ndim=2] example_parallel(int nx=*, int ny=*)
 
 cdef class TestClass1:
     cdef:

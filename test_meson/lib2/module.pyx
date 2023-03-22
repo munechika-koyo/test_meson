@@ -1,12 +1,12 @@
-"""Test module 2
+"""Test module
 """
 from libc.stdio cimport printf
 
-from ..lib1.test_mod1 cimport TestClass1
+from ..lib1.module cimport TestClass1
 
 
 cdef class TestClass2(TestClass1):
-    """Test class
+    """Test class inherited by lib1.module.TestClass1
 
     Parameters
     ----------
@@ -14,6 +14,8 @@ cdef class TestClass2(TestClass1):
         parameter a
     b : int
         parameter b
+    c : int
+        parameter c
     """
     cdef:
         public int c
@@ -23,6 +25,8 @@ cdef class TestClass2(TestClass1):
         super().__init__(a, b)
 
     cpdef void print_result(self):
+        """print (self.a + self.b) * self.c
+        """
         cdef int val = self.mul(self.add())
         printf("a: %d, b: %d, c: %d, (a + b) * c: %d\n", self.a, self.b, self.c, val)
 

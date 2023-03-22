@@ -1,5 +1,5 @@
 pyx_files = [
-  ['test_mod2', 'test_mod2.pyx'],
+  ['module', 'module.pyx'],
 ]
 
 foreach pyx_file : pyx_files

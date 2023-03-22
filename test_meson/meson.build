@@ -1,5 +1,5 @@
 # link .pxd files
-add_project_arguments('-I', 'test_meson/lib1/test_mod1.pxd', language : 'cython')
+add_project_arguments('-I', 'test_meson/lib1/module.pxd', language : 'cython')
 
 # local modules for .pyx file
 pyx_files = [
