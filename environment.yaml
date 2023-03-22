@@ -11,7 +11,7 @@ dependencies:
 - meson>=0.64.0
 - meson-python >= 0.10.0
 - ninja >= 1.8.2
-# - cython == 3.0.0a11 installed by pip temporarily
+# - cython == 3.0.0 installed by pip temporarily
 - numpy
   # for developper tools
 - ipython
@@ -24,5 +24,5 @@ dependencies:
 # pip-install dependencies
 - pip
 - pip:
-  - cython == 3.0.0a11
+  - cython == 3.0.0b1
   - cython-lint

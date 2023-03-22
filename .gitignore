@@ -129,4 +129,4 @@ dmypy.json
 .pyre/
 
 # Meson
-.mesonpy-native-file
+.mesonpy-native-file.ini

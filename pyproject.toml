@@ -1,6 +1,6 @@
 [build-system]
 build-backend = "mesonpy"
-requires = ["cython == 3.0.0a11", "numpy", "meson-python", "ninja >= 1.8.2"]
+requires = ["cython == 3.0.0b1", "numpy", "meson-python", "ninja >= 1.8.2"]
 
 [project]
 name = "test-meson"
@@ -42,7 +42,7 @@ dev = [
   "rich-click",
   "cython-lint",
   "pre-commit",
-  "cython==3.0.0a11",
+  "cython==3.0.0b1",
   "setuptools",       # added untill meson-python comes to allow the editable install
 ]
 
