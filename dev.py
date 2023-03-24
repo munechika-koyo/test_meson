@@ -10,7 +10,7 @@ from pathlib import Path
 import rich_click as click
 
 try:
-    import tomlib
+    import tomllib
 except ImportError:
     import tomli as tomlib
 
