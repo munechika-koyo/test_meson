@@ -1,6 +1,6 @@
 [build-system]
 build-backend = "mesonpy"
-requires = ["cython == 3.0.0b1", "numpy", "meson-python", "ninja >= 1.8.2", "setuptools"]
+requires = ["cython >= 3.0", "numpy", "meson-python", "ninja >= 1.8.2", "setuptools"]
 # setuptools added untill meson-python-v0.13 comes to release version
 
 [project]
@@ -26,7 +26,7 @@ docs = [
   "nbsphinx",
   "pillow",
   "pygments >= 2.11.0",
-  "sphinx >= 5, < 6",
+  "sphinx >= 7, < 8",
   "sphinx-prompt",
   "sphinx-copybutton",
   "pydata-sphinx-theme < 0.11",
@@ -35,16 +35,16 @@ docs = [
   "sphinx-codeautolink",
 ]
 dev = [
+  "build",
   "ipython",
-  "flake8",
   "black",
-  "isort",
+  "ruff",
   "mypy",
   "rich-click",
   "cython-lint",
   "pre-commit",
-  "cython==3.0.0b1",
-  "setuptools",       # added untill meson-python-v0.13 comes to release version
+  "cython >= 3.0",
+  "setuptools",  # added to allow in-place install
 ]
 
 [project.urls]
@@ -57,14 +57,22 @@ line-length = 100
 [tool.cython-lint]
 max-line-length = 100
 
-[tool.flake8]
-max-line-length = 100
-select = "C,E,F,W,B,B950"
-ignore = "E203,E501,W503"
+[tool.ruff]
+line-length = 100
 
-[tool.isort]
-profile = "black"
-line_length = 100
+# Enable Pyflakes `E` and `F` codes by default.
+select = ["E", "F", "W", "I", "N", "B", "NPY"]
+ignore = ["E501", "N802", "N803", "N806"]
+
+# Allow autofix for all enabled rules (when `--fix`) is provided.
+fixable = ["E", "F", "W", "I", "B", "NPY"]
+unfixable = ["E501"]
+
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+# Assume Python 3.10
+target-version = "py310"
 
 [tool.mypy]
 follow-imports = "silent"
