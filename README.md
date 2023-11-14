@@ -10,7 +10,7 @@ python -m pip install git+https://github.com/munechika-koyo/test_meson
 
 ### editableモードでインストールしたい場合
 ```bash
-python -m pip install -e git+https://github.com/munechika-koyo/test_meson
+python -m pip install --no-build-isolation --editable git+https://github.com/munechika-koyo/test_meson
 ```
 
 ### 開発者向けインストール (conda利用)
