@@ -10,7 +10,7 @@ project(
   ]
 )
 
-py = import('python').find_installation()
+py = import('python').find_installation(pure: false)
 dep_py = py.dependency()
 
 # NumPy include directory - needed in all submodules
