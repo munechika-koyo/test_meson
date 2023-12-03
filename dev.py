@@ -9,9 +9,9 @@ from pathlib import Path
 
 import rich_click as click
 
-try:
-    import tomllib
-except ImportError:
+if sys.version_info < (3, 11):
+    import tomllib as tomlib
+else:
     import tomli as tomlib
 
 BASE_DIR = Path(__file__).parent.resolve()
@@ -39,6 +39,7 @@ def cli():
 )
 def build(build_dir, parallel):
     """Build & Install package using Meson build tool.
+
     \b
     ```python
     Examples:
@@ -112,6 +113,7 @@ def clear():
         cmd = cmd_base + remove_path
         subprocess.run(cmd)
         print(f"{label} were removed")
+
 
 ############
 
