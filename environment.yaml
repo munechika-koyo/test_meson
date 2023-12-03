@@ -8,8 +8,8 @@ channels:
 - default
 dependencies:
 - python >= 3.9
-- meson>=0.64.0
-- meson-python >= 0.10.0
+- meson >= 1.2
+- meson-python >= 0.15.0
 - ninja >= 1.8.2
 - cython >= 3.0
 - numpy
