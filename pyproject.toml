@@ -1,7 +1,6 @@
 [build-system]
 build-backend = "mesonpy"
-requires = ["cython >= 3.0", "numpy", "meson-python", "ninja >= 1.8.2", "setuptools"]
-# setuptools added untill meson-python-v0.13 comes to release version
+requires = ["cython >= 3.0", "numpy", "meson-python", "ninja >= 1.8.2"]
 
 [project]
 name = "test-meson"
