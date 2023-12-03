@@ -130,3 +130,6 @@ dmypy.json
 
 # Meson
 .mesonpy-native-file.ini
+
+# vscode
+.vscode/
