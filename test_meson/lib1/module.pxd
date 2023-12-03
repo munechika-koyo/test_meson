@@ -9,7 +9,7 @@ cdef class TestClass1:
     cdef:
         public int a
         public int b
-    
+
     cpdef void print_result(self)
 
     cdef int add(self) nogil

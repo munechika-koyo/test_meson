@@ -1,5 +1,4 @@
-"""Main module for test built module by meson
-"""
+"""Main module for test built module by meson."""
 import sys
 from pathlib import Path
 
