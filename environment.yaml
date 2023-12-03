@@ -21,7 +21,4 @@ dependencies:
 - mypy
 - rich-click
 - pre-commit
-# pip-install dependencies
-- pip
-- pip:
-  - cython-lint
+- cython-lint
