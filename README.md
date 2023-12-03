@@ -1,6 +1,8 @@
 # Test Meson project
 
 CythonとMesonの組み合わせをするためのテストプロジェクト
+詳細はこちらの記事を参照してください。
+https://qiita.com/munechika-koyo/items/362f156b414e05dda6cd
 
 ## インストール方法
 ### pip利用
