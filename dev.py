@@ -68,8 +68,9 @@ def build(build_dir, parallel):
         print("Build failed!")
         sys.exit(1)
 
-    # === install .so files in source tree ==========================
-    for so_path in BUILD_DIR.glob("**/*.so"):
+    # === install .so/.pyd files in source tree ==========================
+    ext = ".pyd" if sys.platform == "win32" else ".so"
+    for so_path in BUILD_DIR.glob(f"**/*{ext}"):
         src = so_path.resolve()
         dst = BASE_DIR / so_path.relative_to(BUILD_DIR)
         shutil.copy(src, dst)
