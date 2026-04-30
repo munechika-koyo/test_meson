@@ -19,7 +19,7 @@ dependencies = ["numpy"]
 
 [project.optional-dependencies]
 docs = [
-  "docutils >= 0.19, < 0.20",
+  "docutils >=0.22, <0.23",
   "ipykernel",
   "ipywidgets",
   "nbsphinx",
