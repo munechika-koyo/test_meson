@@ -28,7 +28,7 @@ docs = [
   "sphinx >=9, <10",
   "sphinx-prompt",
   "sphinx-copybutton",
-  "pydata-sphinx-theme < 0.11",
+  "pydata-sphinx-theme <0.18",
   "sphinx-design",
   "pandoc",
   "sphinx-codeautolink",
